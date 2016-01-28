@@ -2,6 +2,7 @@ print("type integers, each followed by enter; or just enter to finish")
 
 count = 0
 sum = 0
+min = max = 0
 
 while True:
     line = input("integer: ")
