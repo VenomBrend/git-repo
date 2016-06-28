@@ -8,7 +8,7 @@ def decorator_maker(*some_arg):
     return decorator
 
 
-@decorator_maker('some new argument', 'one')
+@decorator_maker('one', 'second')
 def my_func(*arg, **kwargs):
     print(arg)
     print(kwargs)
