@@ -20,7 +20,7 @@ calc = {
 	'/': divide
 	}
 
-operators = tuple(calc.keys())
+operators = calc.keys()
 
 
 def main():
@@ -30,11 +30,11 @@ def main():
 		if (expr.lower()) == 'q':
 			break
 		try:
-			#finding sign
 			sign = ''
 			for c in expr:
 				if c in operators:
 					sign = c
+					break
 			temp = expr.partition(sign)
 
 			result = calc[sign](Decimal(temp[0].strip()),
@@ -44,6 +44,7 @@ def main():
 		except ZeroDivisionError:
 			print('Error: division by zero')
 		except Exception:
+			print('Bad expression')
 			pass
 
 if __name__ == '__main__':
